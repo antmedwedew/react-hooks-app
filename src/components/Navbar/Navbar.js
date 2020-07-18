@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 export const Navbar = () => (
   <nav className='navbar navbar-dark bg-dark navbar-expand-lg'>
-     <div class="navbar-brand">Github поиск</div>
+     <NavLink to='/' className="navbar-brand">Github поиск</NavLink>
       <ul className='navbar-nav'>
         <li className='nav-item'>
           <NavLink exact to='/' className="nav-link">Главная</NavLink>
