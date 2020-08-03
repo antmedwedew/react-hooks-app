@@ -1,7 +1,7 @@
 import { SEARCH_USERS, GET_REPOS, GET_USER, SET_LOADING, CLEAR_USERS } from "../types"
 
 
-export const githubReducer = (state, action) => {
+export const GithubReducer = (state, action) => {
   switch (action.type) {
     case SEARCH_USERS:
       return {
