@@ -32,21 +32,27 @@ export const GithubState = ({children}) => {
 
   const getUser = async name => {
     setLoading()
-    //..
+    
+    const response = await axios.get(
+      `https://api.github.com/users/${name}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
+    )
 
     dispatch({
       type: GET_USER,
-      payload: {}
+      payload: response.data
     })
   }
 
   const getRepos = async name => {
     setLoading()
-    //..
+    
+    const response = await axios.get(
+      `https://api.github.com/users/${name}/repos?per_page=5&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
+    )
 
     dispatch({
       type: GET_REPOS,
-      payload: []
+      payload: response.data
     })
   }
 
