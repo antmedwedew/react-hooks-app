@@ -18,7 +18,7 @@ export const Home = ()=> {
           ? <Loader />
           : users.map(user => {
             return (
-              <div className='col-sm-4 mb-4' key={user}>
+              <div className='col-sm-4 mb-4' key={user.id}>
                 <Card user={user} />
               </div>
             )
